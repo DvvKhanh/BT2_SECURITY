@@ -96,3 +96,7 @@ lưu/truy xuất chữ ký.
    + Chứng thư thu hồi/hết hạn: Không kiểm tra CRL/OCSP → Giải pháp: xác thực OCSP/CRL hoặc nhúng responses trong PAdES-DSS.
    + Lộ khóa riêng / side-channel: Khóa signer bị lộ → Giải pháp: dùng HSM/TPM, quản lý truy cập chặt.
    + Vận hành & thuật toán yếu: Cấu hình sai, thiếu logging → Giải pháp: tuân thủ PAdES, audit và pen-test định kỳ.
+
+## Kết luận
+- Bài tập giúp sinh viên hiểu và thực hành quy trình tạo, nhúng và xác thực chữ ký số trong file PDF theo chuẩn PDF/PAdES, qua đó nắm rõ cấu trúc tài liệu, vị trí lưu chữ ký và thời gian ký, cùng cách sử dụng RSA, SHA-256 và PKCS#7 để đảm bảo tính toàn vẹn, xác thực và chống giả mạo.
+- Chữ ký số PDF duy trì tính toàn vẹn thông qua các thành phần AcroForm, SigDict và ByteRange, còn thông tin thời gian được lưu bằng thuộc tính /M hoặc token RFC3161. Để tăng độ tin cậy và ngăn ngừa nguy cơ sửa đổi hay giả mạo chứng thư, việc mở rộng xác minh bằng DSS và chuẩn PAdES nâng cao là cần thiết. Thử nghiệm các tệp original.pdf, signed.pdf, tampered.pdf cho thấy quy trình ký và kiểm chứng hoạt động chính xác, minh chứng cho tính hiệu quả của phương pháp.
