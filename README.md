@@ -2,9 +2,9 @@
 # Đậu Văn Khánh - K225480106099
 ---
 # I. MÔ TẢ CHUNG
-Sinh viên thực hiện báo cáo và thực hành: phân tích và hiện thực việc nhúng, xác
+- Sinh viên thực hiện báo cáo và thực hành: phân tích và hiện thực việc nhúng, xác
 thực chữ ký số trong file PDF.
-Phải nêu rõ chuẩn tham chiếu (PDF 1.7 / PDF 2.0, PAdES/ETSI) và sử dụng công cụ
+- Phải nêu rõ chuẩn tham chiếu (PDF 1.7 / PDF 2.0, PAdES/ETSI) và sử dụng công cụ
 thực thi (ví dụ iText7, OpenSSL, PyPDF, pdf-lib).
 
 # II. CÁC YÊU CẦU CỤ THỂ
