@@ -1,0 +1,54 @@
+=== KIỂM TRA CHỮ KÝ ĐIỆN TỬ TRÊN TỆP PDF ===
+Thời điểm kiểm tra: 2025-10-29 22:28:02.612173
+Tệp PDF cần xác thực: D:\BT2_Security\pdf\signed.pdf
+===============================================
+🔍 Phát hiện trường chữ ký: SigField1
+Kích thước chữ ký (/Contents): 2520 byte
+Vùng ByteRange: [0, 213033, 218075, 805]
+Giá trị SHA256 tính được: 7fd6e66451d1969cc304385aa5eced5194c9a0e4ab7ee0dbcdc339498d3912ec ✅
+===============================================
+🔒 KẾT QUẢ XÁC THỰC CHỮ KÝ:
+Signer info
+-----------
+Certificate subject: "Common Name: Dau Van Khanh, Organization: K58KTP, Locality: Bac Ninh, State/Province: Bac Ninh, Country: VN"
+Certificate SHA1 fingerprint: 30145879d8fd405d7c53bbbafcb18a09749b7931
+Certificate SHA256 fingerprint: b7a8f6dab4069f32d6f9420311fd593f1ed3984d255f52dc347877fa09c5140a
+Trust anchor: "Common Name: Dau Van Khanh, Organization: K58KTP, Locality: Bac Ninh, State/Province: Bac Ninh, Country: VN"
+The signer's certificate is trusted.
+
+
+Integrity
+---------
+The signature is cryptographically sound.
+
+The digest algorithm used was 'sha256'.
+The signature mechanism used was 'sha256_rsa'.
+
+
+Signing time
+------------
+Signing time as reported by signer: 2025-10-29T13:23:57+00:00
+
+
+Modifications
+-------------
+The signature covers the entire file.
+
+
+Bottom line
+-----------
+The signature is judged VALID.
+
+
+
+📜 THÔNG TIN CHỨNG THƯ NGƯỜI KÝ:
+  Chủ thể: Common Name: Dau Van Khanh, Organization: K58KTP, Locality: Bac Ninh, State/Province: Bac Ninh, Country: VN
+  Dấu vân tay SHA1: 30 14 58 79 D8 FD 40 5D 7C 53 BB BA FC B1 8A 09 74 9B 79 31
+  Dấu vân tay SHA256: B7 A8 F6 DA B4 06 9F 32 D6 F9 42 03 11 FD 59 3F 1E D3 98 4D 25 5F 52 DC 34 78 77 FA 09 C5 14 0A
+
+🕒 Thời gian ký (giờ Việt Nam): 2025-10-29 20:23:57+07:00
+✅ Tài liệu KHÔNG bị chỉnh sửa sau khi ký.
+===============================================
+✅ CHỮ KÝ HỢP LỆ – TÀI LIỆU NGUYÊN VẸN.
+
+📄 Quá trình kiểm tra hoàn tất – kết quả được lưu trong verify_ok.txt.
