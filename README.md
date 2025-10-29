@@ -30,9 +30,9 @@ lưu/truy xuất chữ ký.
  3. Xác định /ByteRange (loại trừ vùng /Contents khỏi hash).
  4. Tính hash (SHA-256/512) trên vùng ByteRange.
  5. Tạo PKCS#7/CMS detached hoặc CAdES:
-   - Include messageDigest, signingTime, contentType.
-   - Include certificate chain.
-   - (Tùy chọn) thêm RFC3161 timestamp token.
+   + Include messageDigest, signingTime, contentType.
+   + Include certificate chain.
+   + (Tùy chọn) thêm RFC3161 timestamp token.
  6. Chèn blob DER PKCS#7 vào /Contents (hex/binary) đúng offset.
  7. Ghi incremental update.
  8. (LTV) Cập nhật DSS với Certs, OCSPs, CRLs, VRI.
