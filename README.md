@@ -51,7 +51,7 @@ lưu/truy xuất chữ ký.
 - Nộp kèm script verify + log kiểm thử.
 ---
 # BÀI LÀM
-1.Cấu trúc PDF liên quan chữ ký:
+## 1. Cấu trúc PDF liên quan chữ ký:
 - Mô tả ngắn gọn các object:
    + Catalog: root object của tài liệu. Thường tham chiếu tới /Pages và /AcroForm.
    + Pages tree / Page object: chứa /Contents (content streams) và resources.
@@ -74,7 +74,7 @@ lưu/truy xuất chữ ký.
    + /ByteRange: thiết lập vùng file để compute digest (loại trừ vùng /Contents).
    + Incremental update xref + trailer: nếu có thay đổi sau chữ ký, xref/trailer mới sẽ khác → phát hiện sửa đổi.
 
-2.Thời gian ký được lưu ở đâu?
+## 2.Thời gian ký được lưu ở đâu?
 - Vị trí có thể lưu thông tin thời gian:
    + /M trong Signature dictionary (dạng text, ví dụ D:20251026...). Không có giá trị pháp lý — chỉ là metadata.
    + Timestamp token (RFC 3161) được nhúng trong PKCS#7/CMS (attribute timeStampToken hoặc separate attribute id-aa-signatureTimeStampToken trong CAdES). Timestamp RFC3161 do một TSA ký trên digest giúp chứng thực thời điểm.
@@ -84,7 +84,7 @@ lưu/truy xuất chữ ký.
    + /M: chỉ là chuỗi định dạng ngày giờ do signer ghi vào dictionary; có thể bị giả mạo (không được ký độc lập). Không đủ cho chứng thực thời điểm.
    + RFC3161 timestamp: do một Time Stamping Authority (TSA) ký trên digest của PKCS#7/CMS (hoặc của dữ liệu), do đó là bằng chứng thời điểm độc lập và đáng tin cậy (nếu tin tưởng TSA).
   
-3.Rủi ro bảo mật chữ ký số trong PDF
+## 3.Rủi ro bảo mật chữ ký số trong PDF
 - Tổng quan ngắn: Chữ ký số trên PDF có thể rất an toàn nếu triển khai theo chuẩn (ví dụ PAdES) và thực hiện kiểm tra xác thực đầy đủ. Tuy nhiên có nhiều lớp rủi ro: từ việc sửa đổi nội dung PDF, dùng cập nhật gia tăng (incremental updates) để che thay đổi, đến sự yếu kém hoặc bị lộ của chứng thư và khoá riêng. Dưới đây tóm tắt các rủi ro chính, cách phát hiện và biện pháp giảm nhẹ.
 - Rủi ro bảo mật và giải pháp:
    + Incremental update lạm dụng: Nhiều lớp chữ ký che giấu thay đổi → Giải pháp: hạn chế incremental updates, kiểm tra modification_level.
