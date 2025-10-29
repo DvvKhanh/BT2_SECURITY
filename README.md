@@ -18,10 +18,10 @@ lưu/truy xuất chữ ký.
 ; Catalog → /AcroForm → SigField → SigDict).
 ## 2) Thời gian ký được lưu ở đâu?
 - Nêu tất cả vị trí có thể lưu thông tin thời gian:
- + /M trong Signature dictionary (dạng text, không có giá trị pháp lý).
- + Timestamp token (RFC 3161) trong PKCS#7 (attribute timeStampToken).
- + Document timestamp object (PAdES).
- + DSS (Document Security Store) nếu có lưu timestamp và dữ liệu xác minh.
+   + /M trong Signature dictionary (dạng text, không có giá trị pháp lý).
+   + Timestamp token (RFC 3161) trong PKCS#7 (attribute timeStampToken).
+   + Document timestamp object (PAdES).
+   + DSS (Document Security Store) nếu có lưu timestamp và dữ liệu xác minh.
 - Giải thích khác biệt giữa thông tin thời gian /M và timestamp RFC3161.
 ## 3) Các bước tạo và lưu chữ ký trong PDF (đã có private RSA)
 - Viết script/code thực hiện tuần tự:
@@ -30,9 +30,9 @@ lưu/truy xuất chữ ký.
  3. Xác định /ByteRange (loại trừ vùng /Contents khỏi hash).
  4. Tính hash (SHA-256/512) trên vùng ByteRange.
  5. Tạo PKCS#7/CMS detached hoặc CAdES:
- - Include messageDigest, signingTime, contentType.
- - Include certificate chain.
- - (Tùy chọn) thêm RFC3161 timestamp token.
+   - Include messageDigest, signingTime, contentType.
+   - Include certificate chain.
+   - (Tùy chọn) thêm RFC3161 timestamp token.
  6. Chèn blob DER PKCS#7 vào /Contents (hex/binary) đúng offset.
  7. Ghi incremental update.
  8. (LTV) Cập nhật DSS với Certs, OCSPs, CRLs, VRI.
